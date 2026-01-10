@@ -24,12 +24,21 @@ console.log("Initializing script");
 
 let count = document.getElementById("count")
 let btn = document.getElementById("btn")
+let save = document.getElementById("save")
+console.log(save);
+
 count.innerHTML+=0
 let value = 0;
+let savestorage  = localStorage.setItem(count, value)
+
 function increment (){
 console.log("click")
 value = value+1
 count.innerText = value
+localStorage.setItem( value)
+save.value = value
 }
+
+
 
 btn.addEventListener("click", increment)
