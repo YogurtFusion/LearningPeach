@@ -4,8 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-Run npm install
+RUN npm install
 
 COPY . .
 
 EXPOSE 4000 
+
+CMD ["npm", "startff"]
