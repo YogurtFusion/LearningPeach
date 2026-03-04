@@ -1,0 +1,11 @@
+nav{
+    padding: 2rem;
+    box-shadow: 10px 5px 10px #f9dada ;
+margin-top: 20px;
+border: 0.2px solid #f9dada;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+   }
