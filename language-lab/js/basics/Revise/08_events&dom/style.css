@@ -1,7 +1,46 @@
-button{
-    width: 20vw;
-    height: 20vh;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+button {
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  width: 30vw;
+  height: 20vh;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.bulb {
+  justify-content: center;
+  margin: 20rem;
+  width: 50vw;
+  height: 80vh;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.glowing {
+  background-color: yellow;
+  box-shadow: 0 0 30px yellow;
+}
+.glow {
+  margin: auto;
+  width: 80%;
 }
