@@ -25,52 +25,48 @@ func1(funct2);
 
 function takeOutTrash() {
   return new Promise((resolve, reject) => {
- let takingTrash = true
- if (takingTrash){
-
-     setTimeout(() => {
-         resolve("you took out trash sucessfull 🗑️ ");
-        }, 500);
-    }
-    else{
-        reject("you didn't took trash out")
+    let takingTrash = true;
+    if (takingTrash) {
+      setTimeout(() => {
+        resolve("you took out trash sucessfull 🗑️ ");
+      }, 500);
+    } else {
+      reject("you didn't took trash out");
     }
   });
 }
 
 function walkDog() {
-return new  Promise((resolve, reject) => {
-    let WalkingDog = true
-    if(WalkingDog){
-
-        setTimeout(() => {
-            resolve("you walked the dog sucessfully 🐶 ");
-        }, 1500);
-    }else{
-        reject("You didn't walked the dog")
+  return new Promise((resolve, reject) => {
+    let WalkingDog = true;
+    if (WalkingDog) {
+      setTimeout(() => {
+        resolve("you walked the dog sucessfully 🐶 ");
+      }, 1500);
+    } else {
+      reject("You didn't walked the dog");
     }
   });
 }
 
 function cleanKitchen() {
   return new Promise((resolve, reject) => {
-    let cleaningKitchen= true
+    let cleaningKitchen = true;
     // let cleaningKitchen= false
-    if(cleaningKitchen){
-
-        setTimeout(() => {
-            resolve("Kitchen cleaned sucessfull🧼");
-        }, 3000);
-    }else{
-        reject("you didn't cleaned the kitchen")
+    if (cleaningKitchen) {
+      setTimeout(() => {
+        resolve("Kitchen cleaned sucessfull🧼");
+      }, 3000);
+    } else {
+      reject("you didn't cleaned the kitchen");
     }
   });
 }
 
-walkDog().then(value =>{console.log(value);return cleanKitchen()})
-         .then(value=>{console.log(value); return takeOutTrash()})
-         .then(value=>{console.log(value); console.log("your chores done sucessfully")})   
-         .catch(err=>console.error(err))
+// walkDog().then(value =>{console.log(value);return cleanKitchen()})
+//          .then(value=>{console.log(value); return takeOutTrash()})
+//          .then(value=>{console.log(value); console.log("your chores done sucessfully")})
+//          .catch(err=>console.error(err))
 
 // walkDog(()=>{
 //     cleanKitchen(()=>{
@@ -80,3 +76,23 @@ walkDog().then(value =>{console.log(value);return cleanKitchen()})
 //         })
 //     })
 // })
+
+// async and await
+
+async function dochores() {
+  try {
+    const WalkingDogResult = await walkDog();
+    console.log(WalkingDogResult);
+    const KitchenCleanResult = await cleanKitchen();
+    console.log(KitchenCleanResult);
+
+    const trashOutResult = await takeOutTrash();
+    console.log(trashOutResult);
+
+    console.log("your chores done sucessfull")
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+dochores();
