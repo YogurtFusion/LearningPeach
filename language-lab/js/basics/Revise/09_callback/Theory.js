@@ -63,19 +63,19 @@ function cleanKitchen() {
   });
 }
 
-// walkDog().then(value =>{console.log(value);return cleanKitchen()})
-//          .then(value=>{console.log(value); return takeOutTrash()})
-//          .then(value=>{console.log(value); console.log("your chores done sucessfully")})
-//          .catch(err=>console.error(err))
+walkDog().then(value =>{console.log(value);return cleanKitchen()})
+         .then(value=>{console.log(value); return takeOutTrash()})
+         .then(value=>{console.log(value); console.log("your chores done sucessfully")})
+         .catch(err=>console.error(err))
 
-// walkDog(()=>{
-//     cleanKitchen(()=>{
-//         takeOutTrash(()=>{
-//             console.log("your chores done sucessfull");
+walkDog(()=>{
+    cleanKitchen(()=>{
+        takeOutTrash(()=>{
+            console.log("your chores done sucessfull");
 
-//         })
-//     })
-// })
+        })
+    })
+})
 
 // async and await
 
