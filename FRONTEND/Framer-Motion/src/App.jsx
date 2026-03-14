@@ -4,10 +4,10 @@ import Bascis from "./Basics.jsx";
 const App = () => {
   return (
    <>
-   <Bascis/>
-   <div className="">
-     
-   </div>
+   
+   {/* <Bascis/> */}
+
+  
    </>
   );
 };
