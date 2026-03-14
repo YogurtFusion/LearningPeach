@@ -18,6 +18,8 @@
 }
 html,
 body {
+  margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
 }
@@ -29,5 +31,13 @@ body {
   width: 200px;
   height: 200px;
   background-color: crimson;
+  border: 2px solid snow
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: honeydew;
   border: 2px solid snow
 }

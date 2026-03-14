@@ -1,9 +1,15 @@
 import React from "react";
-import { motion } from "motion/react";
+import { anticipate, motion } from "motion/react";
+import Bascis from "./Basics.jsx";
 const App = () => {
-  return <>
-  <div className="box"></div>
-  </>;
+  return (
+   <>
+   <Bascis/>
+   <div className="">
+     
+   </div>
+   </>
+  );
 };
 
 export default App;
