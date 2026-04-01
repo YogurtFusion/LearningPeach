@@ -16,6 +16,25 @@ body{
     background: #000;
 }
 
+
+#box1{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+}
+
+#box2{
+    height: 300px;
+    width: 300px;
+    background-color: lightblue;
+}
+
+#box3{
+    height: 300px;
+    width: 300px;
+    background-color: lightgreen;
+}
+
 #Box{
     height: 300px;
     width: 300px;
@@ -40,20 +59,15 @@ body{
 }
 
 
-#box1{
-    height: 300px;
-    width: 300px;
-    background-color: crimson;
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    margin-bottom: 200px;
 }
 
-#box2{
-    height: 300px;
-    width: 300px;
-    background-color: lightblue;
-}
-
-#box3{
-    height: 300px;
-    width: 300px;
-    background-color: lightgreen;
+#part2{
+    display: flex;
+    gap: 50px;
 }

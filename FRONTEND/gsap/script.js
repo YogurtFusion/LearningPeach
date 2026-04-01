@@ -72,5 +72,6 @@ tl.from("h2",{
 tl.from("h4",{
     y:-20,
     opacity:0,
-    duration:1
+    duration:1,
+    stagger: 0.3,
 })
