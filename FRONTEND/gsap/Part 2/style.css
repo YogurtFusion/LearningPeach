@@ -1,55 +1,60 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 html,
-body{
-    height: 100%;
-    width: 100%;
+body {
+  height: 100%;
+  width: 100%;
 }
 
-#page1{
-    height: 100%;
-    width: 100%;
-    background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#page1 {
+  height: 100%;
+  width: 100%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#page2{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(39, 196, 248);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#page2 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(39, 196, 248);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
 }
-#page3{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(8, 130, 191);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 50px;
-}
-
-#box{
-    height: 300px;
-    width: 300px;
-    background: crimson;
+#page3 {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(8, 130, 191);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
 }
 
-h1{
-    font-size: 60px;
-    background-color: red;
-    padding: 10px;
+#box {
+  height: 300px;
+  width: 300px;
+  background: crimson;
 }
-h2{
-    font-size: 50px;
-    background-color: yellow;
-    padding: 10px;
+
+h1 {
+  font-size: 60px;
+  position: relative;
+  background-color: red;
+  padding: 10px;
+}
+h2 {
+  font-size: 50px;
+  position: relative;
+  background-color: yellow;
+  padding: 10px;
 }
