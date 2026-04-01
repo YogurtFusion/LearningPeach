@@ -2,12 +2,17 @@ gsap.from("#page2 #box",{
     scale:0,
     opacity:0,
     rotate:720,
-    duration:1,
+    duration:2,
     scrollTrigger:{
-        trigger:"#page2 #box2",
+        trigger:"#page2 #box",
         scroller:"body",
         markers:true,
-        start
+        start:"top 60%",
+        end:"top 30%",
+        scrub:5,
+
+        // pin property
+        pin:true,
 
     }
 })
