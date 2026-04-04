@@ -1,4 +1,4 @@
-let initialPath = document.querySelector("path");
+let path = document.querySelector("path");
 
 let finalPath = `M 10 100 Q 500 100 990 100`;
 
@@ -13,22 +13,18 @@ string.addEventListener("mouseleave", function (e) {
 });
 
 string.addEventListener("mousemove", function (e) {
-  let rect = string.getBoundingClientRect();
-  // console.log('mouse moved with event\'s: ',e )
-//   initialPath = `M 10 100 Q 500 ${e.y} 990 100`;
-  //   console.log(initialPath);
-  console.log(rect.left);
-
-  let X = e.x - rect.left;
-  let Y = e.y - rect.top;
-
-  let newPath = `M 10 100 Q ${X} ${Y}  990 100`;
-
-  initialPath.setAttribute("d", newPath);
+  path = `M 10 100 Q ${e.x} ${e.y} 990 100`;
+  gsap.to("svg path", {
+    attr: { d: path },
+    duration:0.2,
+    ease:"power3.out"
+  });
 });
 
-
 string.addEventListener("mouseleave", function(){
-    let leave = `M 10 100 Q 500 100 990 100`
-    initialPath.setAttribute("d", "M 10 100 Q 500 100 990 100")
+    gsap.to("svg path",{
+        attr:{d:finalPath},
+        ease:"elastic.out(1,0.2)",
+        duration:1.5,
+    })
 })
