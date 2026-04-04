@@ -16,7 +16,7 @@ string.addEventListener("mousemove", function (e) {
   path = `M 10 100 Q ${e.x} ${e.y} 990 100`;
   gsap.to("svg path", {
     attr: { d: path },
-    duration:0.2,
+    duration:0.3,
     ease:"power3.out"
   });
 });
