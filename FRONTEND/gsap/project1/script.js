@@ -10,17 +10,15 @@ main.addEventListener("mousemove", function (e) {
 });
 
 imageDiv.addEventListener("mouseenter", function (e) {
- cursor.innerHTML ="view more"
-    gsap.to(cursor, {
+  cursor.innerHTML = "view more";
+  gsap.to(cursor, {
     scale: 4,
   });
-
 });
 
-
-imageDiv.addEventListener("mouseleave",function(e){
-    cursor.innerHTML =""
-    gsap.to(cursor,{
-        scale:0,
-    })
-})
+imageDiv.addEventListener("mouseleave", function (e) {
+  cursor.innerHTML = "";
+  gsap.to(cursor, {
+    scale: 0,
+  });
+});
