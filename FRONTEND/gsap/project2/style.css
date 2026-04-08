@@ -14,7 +14,7 @@
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  color: #fff;
+  /* color: #fff; */
 }
 
 html,
@@ -25,12 +25,41 @@ body {
 
 body {
   background: #000;
+  color: white;
 }
+body::selection {
+  background-color: #000;
+  color: #fff;
+}
+
 #main {
   height: 100%;
   width: 100%;
-  background: #111;
+  background-color: lightblue;
+  background-image: url("https://picsum.photos/id/103/4704/3136");
+  /* background-image: url("https://picsum.photos/id/103/4704/3136"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 40px 50px;
+}
+
+#nav i {
+  font-size: 2rem;
+}
+
+#full {
+  color: #000;
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  right: 0;
 }
