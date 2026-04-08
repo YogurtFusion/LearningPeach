@@ -78,18 +78,21 @@ body::selection {
 #full i {
   position: absolute;
   top: 5%;
-  right: 10%;
+  right: 0%;
   background-color: white;
   border-radius: 50%;
-  padding: 5px;
+  padding: 6px;
   font-weight: 600;
   font-size: 25px;
   cursor: pointer;
+  margin: 0 50px;
 }
 
 /* Use pixels (px) for breakpoints as they are more reliable than vw */
-@media screen and (max-width: 720px) {
+/* I don't need right :17% bc i used padding 50px it's kee it above menu hamburger icon no matter what */
+/* @media screen and (max-width: 720px) {
  #full i{
-    right: 17%;
- }
-}
+    right: 17%;  
+    
+  }
+} */

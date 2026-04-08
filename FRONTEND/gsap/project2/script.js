@@ -20,7 +20,7 @@ tl.from("#full i", {
   opacity: 0,
 });
 
-tl.pause();
+// tl.pause();
 
 menu.addEventListener("click", function (e) {
   tl.play();
