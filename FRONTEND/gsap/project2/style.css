@@ -26,6 +26,7 @@ body {
 body {
   background: #000;
   color: white;
+  overflow-x: hidden;
 }
 body::selection {
   background-color: #000;
@@ -51,7 +52,8 @@ body::selection {
 }
 
 #nav i {
-  font-size: 2rem;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 #full {
@@ -59,7 +61,35 @@ body::selection {
   width: 40%;
   height: 100%;
   position: absolute;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.699);
   top: 0;
-  right: 0;
+  right: -40%;
+  backdrop-filter: blue(30px);
+  padding: 150px 60px;
+
+}
+
+#full h4 {
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#full i {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Use pixels (px) for breakpoints as they are more reliable than vw */
+@media screen and (max-width: 720px) {
+ #full i{
+    right: 17%;
+ }
 }
