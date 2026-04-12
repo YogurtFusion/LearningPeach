@@ -5,7 +5,7 @@ function breakTheText() {
   let splittedText = h1text.split("");
 //   console.log(splittedText);
 
-  let halfText = Math.floor(splittedText.length / 2);
+  let halfText = Math.floor(splittedText.length/2);
 //   console.log(halfText);
 
   let clutter = "";
@@ -33,12 +33,29 @@ function breakTheText() {
 
 breakTheText();
 
-gsap.from("h1 span", {
-  y: 50,
-  opacity: 0,
-  duration: 0.8,
-  delay: 0.5,
-  // yoyo:true,
-  repeat: -1,
-  stagger: 0.15,
-});
+
+
+// gsap.from("h1 span", {
+//   y: 50,
+//   opacity: 0,
+//   duration: 0.8,
+//   delay: 0.5,
+//   // yoyo:true,
+//   repeat: -1,
+//   stagger: 0.15,
+// });
+
+
+gsap.from(" h1 .first-half", {
+    y:80,
+    duration:1,
+    stagger:0.15,
+    opacity:0,
+})
+
+gsap.from(".second-half",{
+    y:80,
+    duration:1,
+    stagger:-0.15,
+    opacity:0,
+})
