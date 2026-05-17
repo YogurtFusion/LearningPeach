@@ -79,3 +79,8 @@ console.log(userTwo.email);
 
 //  for more heap and stack see the diagram 
 // C:\workspace\Learning Peach\LANGUAGE-LAB\js\chai_or_js\01_basics\www.youtube.com_watch_v=7gwc-1czolw&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=10.png
+
+let myDate = new Date()
+console.log(typeof(myDate));
+
+console.log(Math.floor(Date.now()/1000));// 1000 for converting in seconds and floor for roudning up 
