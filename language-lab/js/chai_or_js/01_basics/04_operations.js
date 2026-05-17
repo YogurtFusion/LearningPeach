@@ -38,3 +38,6 @@ let gameCounter = 100
 // ++gameCounter;
 gameCounter++;
 console.log(gameCounter);
+let x =0
+++x  // increase first, then use
+x++  // use first, then increase
