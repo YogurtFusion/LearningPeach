@@ -26,9 +26,10 @@ JsUser.email = "chaple@gmail.com"
 Object.freeze(JsUser) // COMMENT OUT before adding or chaing anything or it will not works 
 
 
-JsUser["email"] = "pizza@gmail.com" 
+JsUser["email"] = "pizza@gmail.com"  // modifying the object
 console.log(JsUser);
 
+// adding new key and value in the object
 JsUser.greeting = function(){
     console.log("hellow world");
     
