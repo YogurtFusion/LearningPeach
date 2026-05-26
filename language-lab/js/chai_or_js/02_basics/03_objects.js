@@ -20,13 +20,13 @@ console.log(JsUser[mySym]);
 
 // console.log(JsUser[Symbol("mySym")]); // if you don't define symbol outside it will say un defined 
 
-JsUser.email = "chaple@gmail.com"
+JsUser.email = "chaple@gmail.com"  // modifying the object
 
 
 Object.freeze(JsUser) // COMMENT OUT before adding or chaing anything or it will not works 
 
 
-JsUser["email"] = "pizza@gmail.com"  // modifying the object
+JsUser["email"] = "pizza@gmail.com"  // modifying the object 
 console.log(JsUser);
 
 // adding new key and value in the object

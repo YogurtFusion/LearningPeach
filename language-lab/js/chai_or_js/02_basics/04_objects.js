@@ -1,7 +1,7 @@
-const tinderUser2 = new Object();
-const tinderUser = {};
+const tinderUser2 = new Object();//singleton: made by constructor
+const tinderUser = {};//object literal
 
-tinderUser.id = "id-01";
+tinderUser.id = "id-01";// modifying the object
 tinderUser.name = "sammy";
 tinderUser.isLoggedIn = true;
 
@@ -27,7 +27,7 @@ const obj2 = { 3: "a", 4: "b" };
 const obj3 = { 5: "a", 6: "b" };
 
 const obj4 = Object.assign({}, obj1, obj2, obj3);
-// console.log(obj4);
+console.log(obj4);
 
 const obj5 = { ...obj1, ...obj2, ...obj3 }; // we genrally use this one fo joing the obj it's also latest
 console.log(obj5);
@@ -62,7 +62,9 @@ console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 
+
 // ***********************object destructuring***********************
+
 
 const course = {
   coursename: "js in hindi",
