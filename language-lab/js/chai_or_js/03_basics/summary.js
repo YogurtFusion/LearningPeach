@@ -16,3 +16,21 @@ console.log(calculateCartPrice(200,300,400,500,2000)); // here "..." are Rest op
 // ************ scope ************
 
 // when we test scope in global enviroment is different then code enviroment
+
+
+//************ closures ************
+// child can ask for icecream but elder can't 
+function one() {                  // elder
+  const username = "chapple ";
+  function two() {                // nested child
+    const website = "pizza";
+    console.log(username);
+    
+  }
+
+  // console.log(website); // it will give a error because It's scope is ended in the two
+
+  two()
+}
+
+one();
