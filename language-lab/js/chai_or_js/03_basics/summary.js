@@ -34,3 +34,6 @@ function one() {                  // elder
 }
 
 one();
+
+
+// **** global object in broswer is called window object but in node it's empty
