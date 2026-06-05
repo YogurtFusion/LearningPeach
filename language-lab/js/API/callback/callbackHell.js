@@ -42,8 +42,6 @@ function task5(callback) {
 // task5();
 // console.log(` All tasks completed`);
 
-
-
 // genrally 4 nested callbacks is not big of a deal but after 5 it's going to enter in call back hell
 task1(() => {
   task2(() => {
