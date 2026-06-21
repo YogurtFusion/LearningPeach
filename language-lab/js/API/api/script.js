@@ -35,7 +35,7 @@ async function fetchData() {
     }
     const data = await response.json();
     const pokemonSprite = data.sprites.front_default;
-
+    console.log(data);
     const imgElement = document.getElementById("pokemonSprite");
 
     imgElement.src = pokemonSprite;
