@@ -1,5 +1,5 @@
 # Composable
- > Can create reusable and intershangeble "piceces of the web" then can be combined in various ways to create complex systems.
+ > 'composable' means you can combine small pieces to build something bigger. Keep up the awesome work!
 <br>
 <br>
 
