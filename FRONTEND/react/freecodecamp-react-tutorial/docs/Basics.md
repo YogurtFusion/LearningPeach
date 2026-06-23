@@ -12,3 +12,6 @@
 > learning curve 
 > maintenance concerns 
 > Incompatiblity with the codebase
+
+# What is a React component?
+> A function that returns React elements.
