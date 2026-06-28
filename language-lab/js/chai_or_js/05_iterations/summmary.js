@@ -1,0 +1,1 @@
+// genrally in "array" use "for of loop" && "objects" "for in loops "
