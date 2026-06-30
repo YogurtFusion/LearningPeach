@@ -120,6 +120,12 @@ header {
   object-position: center;
   }
 
+  .challenges {
+    margin: 50vh 0px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 /* 
 *,
 *::before,
