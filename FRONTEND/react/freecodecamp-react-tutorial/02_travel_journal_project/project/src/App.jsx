@@ -6,15 +6,33 @@ import "./App.css";
 import Header from "./components/Header";
 import Entry from "./components/Entry";
 import Challenges from "./components/Challenges";
+import data from "./data/data";
 
 function App() {
   const [count, setCount] = useState(0);
 
   const ninjaTurtles = ["Donatello", "Michaelangelo", "Rafael", "Leonardo"];
+  const EntryElement = data.map((item)=>{
+    return(
+      <Entry
+      key = {item.id}
+        countryName={item.country}
+        PlaceName={item.title}
+        img={{
+          src: `${item.img.src}` ,
+          alt: `${item.img.alt}`,
+        }}
+        dates={item.dates}
+        description={item.text}
+        link={item.googleMapsLink}
+        />
+    )
+  })
   return (
     <>
 
       <Header />
+{EntryElement}
       <Entry
         countryName="JAPAN"
         PlaceName="Mount Fuji"
