@@ -3,7 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>chapple and cheese</title>
   </head>
-  <body></body>
+  <body style="color: lightgoldenrodyellow; background-color: black"></body>
+  <script>
+    const div = document.createElement("div");
+    console.log(div);
+    div.className = "main";
+    div.id = Math.round(Math.random() * 10 + 1);
+
+    div.setAttribute("title", "genrated title");
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+    // div.innerText = "Hakunana matata"
+    const addText = document.createTextNode("Hakunana matata");
+    div.appendChild(addText);
+
+    document.body.appendChild(div)
+  </script>
 </html>
