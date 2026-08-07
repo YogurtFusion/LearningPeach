@@ -11,11 +11,44 @@
     </ul>
   </body>
   <script>
-    function changeLanguage(langName){
-        const list = document.querySelector("li")
-        list.textContent = langName
-     document.append(list)   
+    function addLanguage(langName) {
+      const list = document.createElement("li");
+      list.innerHTML = langName;
+      document.body.querySelector(".language").appendChild(list);
     }
-    
+
+    function changeLanguage(langName) {
+      const list = document.querySelector("li");
+      list.textContent = langName;
+      document.body.querySelector(".language").appendChild(list);
+    }
+
+    function addOptilanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName)); // always use append child instead of inner html
+      document.querySelector(".language").appendChild(li);
+    }
+
+    changeLanguage("JavaScript" );
+    addLanguage("python");
+    addLanguage("python");
+    addOptilanguage("go lang");
+
+    // Edit 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Mojo"
+    const newLi = document.createElement("li")
+    newLi.textContent = "mojo"
+    secondLang.replaceWith(newLi)
+  
+    //edit 
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML  = "<li>TypeScript</li>"
+
+    //Remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+
   </script>
+
 </html>
