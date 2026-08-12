@@ -42,4 +42,11 @@ main{
     color: #212121;
     text-decoration: none;
 
+}#purple{
+    background-color: purple;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    color: #212121;
+    text-decoration: none;
+
 }

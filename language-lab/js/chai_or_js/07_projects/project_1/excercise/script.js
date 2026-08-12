@@ -20,6 +20,9 @@ button.forEach((item) => {
     } else if (e.target === yellow) {
       document.body.style.backgroundColor = "yellow";
       console.log("color button is clicked yellow");
+    } else if (e.target === purple) {
+      document.body.style.backgroundColor = "purple";
+      console.log("color button is clicked purple");
     } else {
       document.body.style.backgroundColor = "red";
     }
