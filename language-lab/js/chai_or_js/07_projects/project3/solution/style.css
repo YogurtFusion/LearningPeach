@@ -1,0 +1,114 @@
+/* ============================================================
+   Concept: a quiet instrument panel for telling time.
+   Ink-blue ground (not flat black), one warm brass accent,
+   a serif built for large numerals paired with a small
+   humanist-sans caption. One focal element: the clock itself.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,440&family=Inter:wght@400;500&display=swap');
+
+:root {
+  --ink-deep: #070910;
+  --ink: #0d1119;
+  --ink-panel: #141a27;
+  --ivory: #f4efe3;
+  --brass: #c8a35d;
+  --brass-soft: rgba(200, 163, 93, 0.28);
+  --muted: #7d879c;
+  --hairline: rgba(244, 239, 227, 0.09);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: radial-gradient(ellipse 900px 620px at 50% 36%, var(--ink-panel) 0%, var(--ink) 55%, var(--ink-deep) 100%);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* thin instrument-panel edge, echoing the clock's own restraint */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--hairline) 25%, var(--hairline) 75%, transparent);
+}
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.9rem, 3vw, 1.6rem);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  animation: settle 900ms cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+#banner span {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+/* the divider earns its place: it separates label from reading,
+   like a baseline on a gauge */
+#banner span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 1px;
+  background: var(--brass);
+}
+
+#clock {
+  font-family: 'Fraunces', serif;
+  font-optical-sizing: auto;
+  font-weight: 380;
+  font-size: clamp(2.4rem, 9vw, 6.25rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ivory);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+  text-shadow: 0 0 70px var(--brass-soft);
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .center {
+    animation: none;
+  }
+}
+
+::selection {
+  background: var(--brass-soft);
+  color: var(--ink-deep);
+}
