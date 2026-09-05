@@ -1,0 +1,274 @@
+/* =========================================================
+   Number Guessing Game — Quiet Premium / Editorial Minimal
+   No cards, no shadows, no gradients. Hairline rules do the
+   structural work. One accent color, used sparingly.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #fafaf9;
+  --ink: #14151a;
+  --muted: #6f6e6a;
+  --line: #e2e1dc;
+  --accent: #2f4538;       /* deep bottle green — the one accent */
+  --accent-soft: #e4ebe6;  /* pale tint, used behind the input on focus */
+  --warn: #8a3324;         /* muted brick — too high / too low */
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  padding: 96px 24px;
+}
+
+header,
+nav {
+  display: none; /* unused chrome from the boilerplate — nothing to show */
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+.wrapper > p {
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 34ch;
+}
+
+.form {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 40px 0 36px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+label#guess {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap; /* visually hidden — the input's own affordance carries the meaning */
+}
+
+.guessField {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+  padding: 4px 2px 10px;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+.guessField::placeholder {
+  color: var(--muted);
+}
+
+.guessField:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.guessField:disabled {
+  opacity: 0.4;
+  border-color: var(--line);
+  cursor: not-allowed;
+  background: transparent;
+}
+
+#subt {
+  appearance: none;
+  cursor: pointer;
+  background: var(--ink);
+  color: var(--bg);
+  border: 1px solid var(--ink);
+  border-radius: 3px;
+  width: max-content;
+  text-align: center;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0 22px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#subt:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+#subt:active {
+  background: #1c2b21;
+}
+
+#subt:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.resultparas {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.resultparas p {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 14px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* "Previous guesses" grows as you play — stack it instead of
+   forcing a long comma-list to sit right-aligned next to its label. */
+.resultparas p:first-of-type {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.guesses {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  text-align: right;
+}
+
+.resultparas p:first-of-type .guesses {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.lastResult {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+.lowOrHi {
+  min-height: 1.4em;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* script.js writes messages in as <h2> — collapse it back down
+   to plain inline text instead of a bold browser-default heading. */
+.lowOrHi h2 {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+/* Toggle these from script.js — e.g. lowOrHiEl.classList.add('too-high') */
+.lowOrHi.too-high,
+.lowOrHi.too-low {
+  color: var(--warn);
+}
+
+.lowOrHi.win {
+  color: var(--accent);
+}
+
+/* The "Start new game" block script.js appends to .resultparas */
+.resultparas .button {
+  display: block;
+  margin: 24px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+#newGame {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  background: var(--ink);
+  color: var(--bg);
+  border: 1px solid var(--ink);
+  border-radius: 3px;
+  padding: 10px 22px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#newGame:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+#newGame:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 56px 20px;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #subt {
+    width: 100%;
+    padding: 12px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
