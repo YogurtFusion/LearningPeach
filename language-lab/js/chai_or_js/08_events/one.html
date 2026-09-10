@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html events</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, sans-serif;
+        background: #0f0f0f;
+        color: #f0f0f0;
+        padding: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.03em;
+      }
+
+      #images {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      #images li {
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      #images li:has(a) {
+        width: 200px;
+        height: 140px;
+        overflow: visible;
+      }
+
+      #images img {
+        display: block;
+        width: 200px;
+        height: 140px;
+        object-fit: cover;
+        transition:
+          transform 0.2s ease,
+          opacity 0.2s ease;
+      }
+
+      #images img:hover {
+        transform: scale(1.04);
+        opacity: 0.9;
+      }
+
+      #images a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 140px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        border: 1.5px solid #ffffff;
+        border-radius: 8px;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      #images a:hover {
+        background: #ffffff;
+        color: #0f0f0f;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li><a href="https://google.com" id="google">Google</a></li>
+      </ul>
+    </div>
+    <script>
+      // document.getElementById("owl") = function () {
+      //     alert("owl clicked")
+      // }
+      document.getElementById("owl").addEventListener(
+        "click",
+        function () {
+          //   alert("owl is clicked again");
+        },
+        false,
+      ); // but we don't write false bc it's already false by default
+      // there is two concepts called event bubling and caputuring
+      // we genrally use event bubling which is achived from false
+
+      // type, timestamp, default prevented
+      // target, toelement, srcElement, currentTarget
+      // clientX, clientY, screenX, screenY
+      // altKey, ctrlkey, shiftkey, keycode
+
+      // bubling is like bubble goes from down to up same with element if there are two elements first inner wil be cliecked
+      document.getElementById("owl").addEventListener(
+        "click",
+        function (e) {
+          console.log(e); // asked in the interview like what's the view ,clientx, clienty or timespan of click etc
+          console.log("owl is clicked");
+          e.stopPropagation(); // it will just run this scope console log and the stop other outside scripts like the ul/images we used here
+          //   console.log("owl is clicked again");
+        },
+        false,
+      );
+
+      //   document.getElementById("images").addEventListener(
+      //     "click",
+      //     function (e) {
+      //       console.log("images are clicked");
+      //     },
+      //     false,
+      //   );
+
+      //   ----------- **** ----------------------------
+      // capturing goes opposite. Top to bottom
+
+      //   document.getElementById("images").addEventListener("click", function (e) {
+      //     console.log("images are clicked");
+      //   },true);
+      //   document.getElementById("owl").addEventListener("click", function (e) {
+      //     console.log(e); // asked in the interview like what's the view ,clientx, clienty or timespan of click etc
+      //     e.stopPropagation()// it will just run this scope console log and the stop other scripts like the ul/images we used here
+      //   },true);
+
+      document.getElementById("google").addEventListener(
+        "click",
+        function (e) {
+          e.preventDefault();
+          console.log(
+            "google is clicked but due to prevent default it's default behavior is of",
+          );
+        },
+        false,
+      );
+
+      document.querySelector("#images").addEventListener(
+        "click",
+        function (e) {
+          if (e.target.tagName === "IMG") {
+            console.log(e.target.id);
+
+            console.log(e.target.parentNode);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            // removeIt.parentNode.removeChild(removeIt)
+          }
+        },
+        false,
+      );
+      //   document.querySelector("#images").addEventListener("click",function(e){
+      //     console.log(e.target.parentNode)
+      //     let removeIt = e.target.parentNode
+      //     removeIt.remove()
+      //     // removeIt.parentNode.removeChild(removeIt)
+      //   },false)
+    </script>
+  </body>
+</html>
