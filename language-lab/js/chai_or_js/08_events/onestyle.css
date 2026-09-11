@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0f0f0f;
+  color: #f0f0f0;
+  padding: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+#images {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+#images li {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#images li:has(a) {
+  width: 200px;
+  height: 140px;
+  overflow: visible;
+}
+
+#images img {
+  display: block;
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+#images img:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+}
+
+#images a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 140px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1.5px solid #ffffff;
+  border-radius: 8px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+#images a:hover {
+  background: #ffffff;
+  color: #0f0f0f;
+}
