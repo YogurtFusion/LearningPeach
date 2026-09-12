@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapple and cheese</title>
+  </head>
+  <body>
+    <h1>Chapple and cheese</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // handler is a function without name but some times there will be a name when function is written somewhere else and we just give it's reference
+
+    // setTimeout(function(){},2000)
+
+    const sayCheese = function () {
+      console.log("SAy chhEese");
+    };
+
+    // setTimeout(sayCheese(),2000) // here we're directly excecuting which is wrong
+
+    setTimeout(sayCheese, 2000); // here we are taking reference but here we don't have ()
+
+    // setTimeout(function () {
+    //   document.querySelector("h1").innerHTML = "BEst JS seRies";
+    // }, 8000);
+
+  const changeMe =   setTimeout(function () {
+      document.querySelector("h1").innerHTML = "BEst JS seRies";
+      console.log("so 5secs are passes and h1 is already printed");
+      
+    }, 5000);
+    
+    // clearTimeout(changeMe)
+    
+    document.querySelector("#stop").addEventListener("click",function(e){
+        clearTimeout(changeMe)
+        console.log(" if your're reading this then stop is clicked");
+    })
+
+  </script>
+</html>

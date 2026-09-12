@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapple and cheese</title>
+    <link rel="stylesheet" href="three.css" />
+  </head>
+  <body>
+    <h1>Chapple and JavaScript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // setInterval(function () {
+    //   console.log("Say Chapple Cheeese", Date.now());
+    // }, 1000);
+    const sayDate = function () {
+      console.log("say chapple", Date.now());
+    };
+
+    // setInterval(sayDate,1000)
+    const sayDateRef = function (str) {
+      console.log(str, Date.now());
+    };
+
+    //  setInterval(sayDateRef,1000,"hi") // this is how we givee parameter to the referenced function
+
+    //  document.body.querySelector("#start").addEventListener(
+    //   "click",
+    //   function () {
+    //     const intervalid = setInterval(sayDateRef, 1000, "hi"); // this is how we givee parameter to the referenced function
+        
+    //     document.body.querySelector("#stop").addEventListener(
+    //       "click",
+    //       function () {
+    //         console.log("now event's are stoppped");
+
+    //         clearInterval(intervalid);
+    //       },
+    //       false,
+    //     );
+    //   },
+    //   false,
+    // );
+  
+    let intervalid;
+
+    document.querySelector("#start").addEventListener("click",function(){
+      intervalid = setInterval(sayDateRef,1000,"hi")
+    },false)    
+    document.querySelector("#stop").addEventListener("click",function(){
+      clearInterval(intervalid)
+      console.log("event's are stopped now");
+      
+    },false )
+
+  
+  </script>
+</html>
