@@ -1,0 +1,223 @@
+/* ─── Google Font ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ─── Reset & Base ────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Design Tokens ───────────────────────────────────────────────────────── */
+:root {
+  --bg-base:        #0d0f14;
+  --bg-glow:        #1a1d2e;
+  --card-bg:        rgba(255, 255, 255, 0.05);
+  --card-border:    rgba(255, 255, 255, 0.10);
+  --card-shadow:    0 8px 32px rgba(0, 0, 0, 0.55);
+  --card-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.75);
+
+  --accent:         #6c63ff;
+  --accent-hover:   #7d75ff;
+
+  --text-primary:   #f0f0f5;
+  --text-secondary: #8b8fa8;
+  --text-muted:     #555a72;
+
+  --avatar-border:  #6c63ff;
+
+  --badge-bg:       rgba(108, 99, 255, 0.18);
+  --badge-border:   rgba(108, 99, 255, 0.40);
+  --badge-color:    #a09aff;
+
+  --radius-card:    20px;
+  --radius-btn:     12px;
+  --radius-pill:    999px;
+
+  --font:           'Inter', system-ui, -apple-system, sans-serif;
+  --transition:     0.22s ease;
+}
+
+/* ─── Body / Layout ───────────────────────────────────────────────────────── */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(108, 99, 255, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 80% 80%, rgba(99, 179, 237, 0.07) 0%, transparent 60%);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 28px;
+  padding: 40px 16px;
+}
+
+/* ─── Profile Card ────────────────────────────────────────────────────────── */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 32px 36px;
+
+  background: var(--card-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow);
+
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* ─── Avatar ──────────────────────────────────────────────────────────────── */
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--avatar-border);
+  box-shadow: 0 0 0 5px rgba(108, 99, 255, 0.15);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ─── Name ────────────────────────────────────────────────────────────────── */
+.profile-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+
+/* ─── Followers Badge / Pill ──────────────────────────────────────────────── */
+.profile-followers {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--badge-color);
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+/* optional icon before the text via pseudo-element */
+.profile-followers::before {
+  content: '👥';
+  font-size: 0.75rem;
+}
+
+/* ─── Bio ─────────────────────────────────────────────────────────────────── */
+.profile-bio {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  text-align: center;
+  max-width: 300px;
+}
+
+/* ─── Profile Link (styled as button) ────────────────────────────────────── */
+.profile-link {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 9px 22px;
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-btn);
+  color: var(--accent);
+  font-family: var(--font);
+  font-size: 0.825rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.profile-link:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ─── Trigger Button ──────────────────────────────────────────────────────── */
+main > button {
+  padding: 12px 30px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(108, 99, 255, 0.35);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+main > button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(108, 99, 255, 0.50);
+}
+
+main > button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(108, 99, 255, 0.35);
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 420px) {
+  .profile-card {
+    padding: 32px 20px 28px;
+    border-radius: 16px;
+  }
+
+  .profile-avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .profile-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-card {
+    padding: 24px 14px 22px;
+  }
+
+  main > button {
+    padding: 11px 22px;
+    font-size: 0.84rem;
+  }
+}
