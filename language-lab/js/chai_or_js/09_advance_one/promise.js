@@ -80,7 +80,7 @@ async function getAllUseres() {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
-    const data = await response.json;
+    const data = await response.json();
     console.log(data);
   } catch (error) {
     console.log("E: ",error);
@@ -100,5 +100,6 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 })
 .catch((error)=>console.log(error))
 
-Promise.all
+// Promise.all([promiseOne, promiseThree])
+// Promise.all
 // yes this is also available , 
