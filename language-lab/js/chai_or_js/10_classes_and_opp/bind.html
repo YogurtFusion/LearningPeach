@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Button clicked</button>
+  </body>
+  <script>
+    class React {
+      constructor() {
+        this.library = "React";
+        this.server = "https://localhost:300";
+
+        //requirement
+        document
+          .querySelector("button")
+          .addEventListener("click", this.handleClick.bind(this));
+      }
+      handleClick() {
+        console.log("button clicked");
+        console.log(this.server);
+      }
+    }
+    const app = new React();
+  </script>
+</html>
+
+<!-- Without the bind method, an event listener only has access to the context (or this) of the element that triggers the event (like a button in this case). So, in your example, the handleClick event listener only has the button's context (this refers to the button itself).
+
+addEventListener("click", this.handleClick) passes the function itself, detached from the object. When the click fires, the browser calls it with this set to the element the listener is attached to (the button). So this.server would be undefined, because a button has no server property.
+
+.bind(this) creates a new function with this permanently locked to the class instance, so this.server works.
+
+1. bind (what you have)
+button.addEventListener("click", this.handleClick.bind(this));
+
+ 2. arrow function wrapper: arrows inherit `this` from where they're written
+button.addEventListener("click", () => this.handleClick());
+
+3. arrow function as a class field: the pattern React class components popularized
+handleClick = () => {
+  console.log(this.server);
+};
+ then: addEventListener("click", this.handleClick)
+
+ Option 3 is why you rarely saw bind in later React class code, but you’d see this.handleClick = this.handleClick.bind(this) in constructors in older code. That’s the exact problem this demo is modeling.
+ 
+ -->
