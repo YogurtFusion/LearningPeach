@@ -1,6 +1,19 @@
 Property = any named value stored on an object.
 Method = a property whose value is a function.
 
+objects are genrally not iterable by default but you can do something like 
+
+
+for (let [key,value] of chai) {         // not iterable 
+    console.log(`${key}:${value}`);
+    
+}   
+
+
+for (let [key,value] of Object.entries(chai)) { 
+    console.log(`${key}:${value}`);
+    
+}   
 
 /*
 
