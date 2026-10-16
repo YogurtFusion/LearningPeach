@@ -1,4 +1,4 @@
-const descripter = Object.getOwnPropertyDescriptor(Math, "PI");
+const descripter = Object.getOwnPropertyDescriptor(Math, "PI");/** See full rules here: {@link ./define.md} */
 
 console.log(descripter);
 
