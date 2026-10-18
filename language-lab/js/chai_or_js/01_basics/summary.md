@@ -1,0 +1,1 @@
+function act as an function as well as object
