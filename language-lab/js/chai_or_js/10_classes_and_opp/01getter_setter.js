@@ -16,7 +16,7 @@ class User {
 
   get password() {
     // getter and setter are the special methods which stay above the normal method AND works on the normal properties and make it special method  and help it to overwrite  a properties like email or password etc 
-
+     // get bring things from the memories and leave their and setter do the setting their values part
     // return this._password.toUpperCase()
     // return `${this._password}hitesh`
     return "you'll not get the pass";
