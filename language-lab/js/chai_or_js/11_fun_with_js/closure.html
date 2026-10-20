@@ -6,35 +6,86 @@
     <title>closure</title>
   </head>
   <body style="background-color: #313131">
-    <script>
-      //   function init() {
-      //     let name = "Mozilla";
-      //     function displayName() {
-      //      console.log(name);
-      //     }
-      //     displayName();
-      //   }
-      //   init();
-
-      function outer() {
-        let username = "hitesh";
-        console.log("OUTER", secret);
-        function inner() {
-          let secret = "My123";
-          console.log("inner ", username);
-        }
-
-        function innerTwo(){
-          console.log("innerTwo", username);
-          console.log(secret);
-          
-          
-        }
-        inner();
-        innerTwo()
-      }
-      outer();
-      console.log("Too Outer", username);
-    </script>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
   </body>
+  <script>
+    // lexical scope
+
+    //   function init() {
+    //     let name = "Mozilla";
+    //     function displayName() {
+    //      console.log(name);
+    //     }
+    //     displayName();
+    //   }
+    //   init();
+
+    //
+
+    // function outer() {
+    //   let username = "hitesh";
+    //   console.log("OUTER", secret);
+    //   function inner() {
+    //     let secret = "My123";
+    //     console.log("inner ", username);
+    //   }
+
+    //   function innerTwo(){
+    //     console.log("innerTwo", username);
+    //     console.log(secret);
+
+    //   }
+    //   inner();
+    //   innerTwo()
+    // }
+    // outer();
+    // console.log("Too Outer", username);
+
+    // *************** closure ***************************//
+
+    function makeFunc() {
+      const name = "Mozilla";
+      function displayName() {
+        // return displayName → returns the function itself without executing it.
+        //return displayName() → executes the function and returns its result.
+        console.log(name);
+      }
+      return displayName; // we're not only returning display name but also other variables in it's parent function thanks to lexical scoping bc it's wire is connected to it's parents
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+
+    // Here's what happens:
+    // 1. makeFunc() creates name and displayName.
+    // 2. return displayName returns a reference to the function, not its result.
+    // 3. makeFunc() finishes executing.
+    // 4. But myFunc now references displayName, which still needs name.
+
+    // Think of it like this:
+
+    // makeFunc()'s execution is finished. ✅
+    // displayName() still exists and can be called. ✅
+    // The name variable remains accessible through the closure. ✅
+  </script>
+  <script>
+    // document.getElementById("orange").onclick = function () {
+    //   document.body.style.backgroundColor = `orange`;
+    // };
+    // document.getElementById("green").onclick = function () {
+    //   document.body.style.backgroundColor = "green";
+    // };
+
+    function clickHandler(color) {
+      // document.body.style.backgroundColor = `${color}` // it's either returning the reference(no ()) or directly excecuting the funtion (() with value in strig like ("orange")) that's why we've to return the function
+
+      return function () {
+        document.body.style.backgroundColor = `${color}`; // now we're just returing the whole function 
+      };
+    }
+
+    document.getElementById("orange").onclick = clickHandler("orange");
+    document.getElementById("green").onclick = clickHandler("green");
+  </script>
 </html>
