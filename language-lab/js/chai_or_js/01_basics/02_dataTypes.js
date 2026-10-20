@@ -2,16 +2,13 @@
 
 // alert(3+3)
 
-console.log(3
-    +
-    3
-)// code redablity should be high 
+console.log(3 + 3); // code redablity should be high
 
 console.log("Chapple");
 
-let name = "Cheese"
-let age = 19
-let isLoggedIn = false
+let name = "Cheese";
+let age = 19;
+let isLoggedIn = false;
 let datatype;
 // number => 2 to power 53
 // bigint
@@ -21,8 +18,7 @@ let datatype;
 // undefined =>
 // symbol => unique /* react shit */
 
-// object 
+// object
 
-console.log(typeof undefined);// undefined
-console.log(typeof null);// object
-
+console.log(typeof undefined); // undefined
+console.log(typeof null); // object

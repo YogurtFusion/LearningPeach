@@ -23,12 +23,12 @@ main {
   width: 100vw;
   margin: auto;
 }
-.result{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 25vw;
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 25vw;
 }
 main button {
   padding: 0.25rem 1rem;

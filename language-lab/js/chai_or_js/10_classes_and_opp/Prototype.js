@@ -55,15 +55,15 @@ Teacher.__pro__ = User;
 
 Object.setPrototypeOf(TeachingSupport, Teacher); // Teaching support is acceesing/inheriting the propoerties of teacher
 
-let anotherUserName = "chai or code"
+let anotherUserName = "chai or code";
 
-String.prototype.trueLenght = function(){
-    console.log(`${this}`)
-    // console.log(`${this.name}`);//obselete property
-    console.log(`True lenght is: ${this.trim().length}`)
-}
+String.prototype.trueLenght = function () {
+  console.log(`${this}`);
+  // console.log(`${this.name}`);//obselete property
+  console.log(`True lenght is: ${this.trim().length}`);
+};
 
-anotherUserName.trueLenght()
+anotherUserName.trueLenght();
 
-"hitesh".trueLenght()
-"iceTea".trueLenght()
+"hitesh".trueLenght();
+"iceTea".trueLenght();

@@ -38,4 +38,6 @@ function User(email, password) {
 
 const chai = new User("chai@chai.com", "chai");
 
-console.log(` here is the email ${chai.email}, here is the password ${chai.password}`);
+console.log(
+  ` here is the email ${chai.email}, here is the password ${chai.password}`,
+);

@@ -4,8 +4,6 @@
 
 // }
 
-
-
 // if(2!="2"){
 // console.log("executed")
 // }
@@ -28,7 +26,6 @@
 // }
 // // console.log(`User Power: ${power}`);
 
-
 // const balance = 1000;
 
 ////if(balance>500) console.log("test"),console.log("test2");// this is not the good practice
@@ -43,14 +40,14 @@
 //   console.log("less then 1200");
 // }
 
-const userLoggedIn = true
-const debitCard = true
-const loggedInFromGoogle = false
-const loggedInFromEmail = true
+const userLoggedIn = true;
+const debitCard = true;
+const loggedInFromGoogle = false;
+const loggedInFromEmail = true;
 
-if(userLoggedIn && debitCard ){
-    console.log("Allowed access")
+if (userLoggedIn && debitCard) {
+  console.log("Allowed access");
 }
-if(loggedInFromEmail || loggedInFromEmail){
-    console.log("User logged in ")
+if (loggedInFromEmail || loggedInFromEmail) {
+  console.log("User logged in ");
 }

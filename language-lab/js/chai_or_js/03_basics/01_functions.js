@@ -20,8 +20,6 @@ sayMyName();
 //  () is excecution
 // (number1, number3) now here it's called we're passing arguments
 
-
-
 // function addTwoNumbers(number1,number2){
 //     console.log(number1+number2);
 
@@ -52,7 +50,7 @@ function loginUserMessage(username) {
   return `${username} just logged in `;
 }
 
-console.log(loginUserMessage("cheesey pizza") )
+console.log(loginUserMessage("cheesey pizza"));
 
 //loginUserMessage("cheesey pizza") // Will not print anything because console log is missing
 // console.log(loginUserMessage()); // this will give undefined not NuN
@@ -83,13 +81,12 @@ handleObject({
   price: 399,
 });
 
+const myNewArray = [200, 300, 400, 500, 600];
 
-const myNewArray   = [200,300,400,500,600]
-
-function returnSecondValue(getArray){
-  return getArray[1]
+function returnSecondValue(getArray) {
+  return getArray[1];
 }
 
-console.log(`second value of myNewArray is ${returnSecondValue(myNewArray)}`)
+console.log(`second value of myNewArray is ${returnSecondValue(myNewArray)}`);
 
-console.log(returnSecondValue([200,500,100,300]));// just like object you can make array on the spot  
+console.log(returnSecondValue([200, 500, 100, 300])); // just like object you can make array on the spot

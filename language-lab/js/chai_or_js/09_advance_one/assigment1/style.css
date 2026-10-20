@@ -1,5 +1,5 @@
 /* ─── Google Font ─────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 /* ─── Reset & Base ────────────────────────────────────────────────────────── */
 *,
@@ -12,32 +12,32 @@
 
 /* ─── Design Tokens ───────────────────────────────────────────────────────── */
 :root {
-  --bg-base:        #0d0f14;
-  --bg-glow:        #1a1d2e;
-  --card-bg:        rgba(255, 255, 255, 0.05);
-  --card-border:    rgba(255, 255, 255, 0.10);
-  --card-shadow:    0 8px 32px rgba(0, 0, 0, 0.55);
+  --bg-base: #0d0f14;
+  --bg-glow: #1a1d2e;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
   --card-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.75);
 
-  --accent:         #6c63ff;
-  --accent-hover:   #7d75ff;
+  --accent: #6c63ff;
+  --accent-hover: #7d75ff;
 
-  --text-primary:   #f0f0f5;
+  --text-primary: #f0f0f5;
   --text-secondary: #8b8fa8;
-  --text-muted:     #555a72;
+  --text-muted: #555a72;
 
-  --avatar-border:  #6c63ff;
+  --avatar-border: #6c63ff;
 
-  --badge-bg:       rgba(108, 99, 255, 0.18);
-  --badge-border:   rgba(108, 99, 255, 0.40);
-  --badge-color:    #a09aff;
+  --badge-bg: rgba(108, 99, 255, 0.18);
+  --badge-border: rgba(108, 99, 255, 0.4);
+  --badge-color: #a09aff;
 
-  --radius-card:    20px;
-  --radius-btn:     12px;
-  --radius-pill:    999px;
+  --radius-card: 20px;
+  --radius-btn: 12px;
+  --radius-pill: 999px;
 
-  --font:           'Inter', system-ui, -apple-system, sans-serif;
-  --transition:     0.22s ease;
+  --font: "Inter", system-ui, -apple-system, sans-serif;
+  --transition: 0.22s ease;
 }
 
 /* ─── Body / Layout ───────────────────────────────────────────────────────── */
@@ -50,8 +50,16 @@ body {
   font-family: var(--font);
   background-color: var(--bg-base);
   background-image:
-    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(108, 99, 255, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 30% at 80% 80%, rgba(99, 179, 237, 0.07) 0%, transparent 60%);
+    radial-gradient(
+      ellipse 60% 50% at 50% 0%,
+      rgba(108, 99, 255, 0.12) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 30% at 80% 80%,
+      rgba(99, 179, 237, 0.07) 0%,
+      transparent 60%
+    );
   color: var(--text-primary);
   min-height: 100vh;
 }
@@ -84,7 +92,9 @@ main {
   border-radius: var(--radius-card);
   box-shadow: var(--card-shadow);
 
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .profile-card:hover {
@@ -131,7 +141,7 @@ main {
 
 /* optional icon before the text via pseudo-element */
 .profile-followers::before {
-  content: '👥';
+  content: "👥";
   font-size: 0.75rem;
 }
 
@@ -158,7 +168,10 @@ main {
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.2px;
-  transition: background var(--transition), color var(--transition), transform var(--transition);
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition);
 }
 
 .profile-link:hover {
@@ -180,13 +193,16 @@ main > button {
   letter-spacing: 0.2px;
   cursor: pointer;
   box-shadow: 0 4px 18px rgba(108, 99, 255, 0.35);
-  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  transition:
+    background var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 main > button:hover {
   background: var(--accent-hover);
   transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(108, 99, 255, 0.50);
+  box-shadow: 0 8px 28px rgba(108, 99, 255, 0.5);
 }
 
 main > button:active {

@@ -1,16 +1,16 @@
 function one() {
-    console.log("one")
-    two()
+  console.log("one");
+  two();
 }
 
-function two(){
-    console.log("two")
-    three()
+function two() {
+  console.log("two");
+  three();
 }
-function three(){
-    console.log("three")
+function three() {
+  console.log("three");
 }
 
-one()
-two()
-three()
+one();
+two();
+three();

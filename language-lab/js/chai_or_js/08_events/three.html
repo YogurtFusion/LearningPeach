@@ -30,7 +30,7 @@
     //   "click",
     //   function () {
     //     const intervalid = setInterval(sayDateRef, 1000, "hi"); // this is how we givee parameter to the referenced function
-        
+
     //     document.body.querySelector("#stop").addEventListener(
     //       "click",
     //       function () {
@@ -43,18 +43,23 @@
     //   },
     //   false,
     // );
-  
+
     let intervalid;
 
-    document.querySelector("#start").addEventListener("click",function(){
-      intervalid = setInterval(sayDateRef,1000,"hi")
-    },false)    
-    document.querySelector("#stop").addEventListener("click",function(){
-      clearInterval(intervalid)
-      console.log("event's are stopped now");
-      
-    },false )
-
-  
+    document.querySelector("#start").addEventListener(
+      "click",
+      function () {
+        intervalid = setInterval(sayDateRef, 1000, "hi");
+      },
+      false,
+    );
+    document.querySelector("#stop").addEventListener(
+      "click",
+      function () {
+        clearInterval(intervalid);
+        console.log("event's are stopped now");
+      },
+      false,
+    );
   </script>
 </html>

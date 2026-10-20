@@ -32,20 +32,19 @@ if (Object.keys(emptyObj).length === 0) {
 // val1 = 5 ?? 10; // here they will choose the first value
 // console.log(val1);
 
-// val1 = null ?? 10; // here it will avoid null 
+// val1 = null ?? 10; // here it will avoid null
 // console.log(val1);
 
-// val1 = undefined ?? 10; // here it will avoid undefined 
+// val1 = undefined ?? 10; // here it will avoid undefined
 // console.log(val1);
 
 // val1 = null ?? 10 ?? 20; // here they will choose the first value
 // console.log(val1);
 
-
 // Terniary Operator
 
 // condition ? true : false
 
-const iceTeaPrice = 100
+const iceTeaPrice = 100;
 
-iceTeaPrice <=80? console.log("less then 80"):console.log("more then 80")
+iceTeaPrice <= 80 ? console.log("less then 80") : console.log("more then 80");

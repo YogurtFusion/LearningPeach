@@ -32,22 +32,21 @@ console.log(gameName);
 console.log(gameName.charAt(4));
 console.log(gameName.indexOf("t"));
 
-const newString = gameName.substring(0, 4);// if you give it -ve value it will ignore it  and starts from 0 
+const newString = gameName.substring(0, 4); // if you give it -ve value it will ignore it  and starts from 0
 console.log(`${newString} \n \n`);
 
-const anotherString = gameName.slice(-18, 4); // when negative no. is bigger then string lenght then js starts with 0 
+const anotherString = gameName.slice(-18, 4); // when negative no. is bigger then string lenght then js starts with 0
 console.log(`using anotherString ${anotherString} `);
 
 console.log(`using slice ${gameName.slice(0, -3)} \n`);
 
-
-const salad = "   avacado  "
+const salad = "   avacado  ";
 console.log(salad);
 console.log(salad.trim());
 
-const url = "https://chapplecheese.com/margereta%20pizza"
+const url = "https://chapplecheese.com/margereta%20pizza";
 
-console.log(url.replace("%20","-"));
+console.log(url.replace("%20", "-"));
 
 console.log(url.includes("pizza"));
 

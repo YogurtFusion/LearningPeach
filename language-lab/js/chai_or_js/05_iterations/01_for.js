@@ -36,25 +36,23 @@ let myArray = ["chaple", "cheese", "pizza"];
 
 for (let i = 0; i < myArray.length; i++) {
   const element = myArray[i];
-//   console.log(element);
+  //   console.log(element);
 }
 
+// break & continue
 
-// break & continue 
-
-for (let i = 1; i<=20; i++){
-    if(i===5){
-// console.log("5 is detected ")
-break
-    }
-    // console.log(`value of i is ${i}`)
+for (let i = 1; i <= 20; i++) {
+  if (i === 5) {
+    // console.log("5 is detected ")
+    break;
+  }
+  // console.log(`value of i is ${i}`)
 }
 
-
-for(let i = 1; i<=20; i++){
-    if(i===5){
-        console.log("detected 5")
-        continue
-    }
-    console.log(`value of i ${i}`)
+for (let i = 1; i <= 20; i++) {
+  if (i === 5) {
+    console.log("detected 5");
+    continue;
+  }
+  console.log(`value of i ${i}`);
 }

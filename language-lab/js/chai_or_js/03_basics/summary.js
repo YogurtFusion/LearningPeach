@@ -1,39 +1,38 @@
-
-function loginUserMessage (username) {
-    return`${username} just logged in `
+function loginUserMessage(username) {
+  return `${username} just logged in `;
 }
 
-console.log(loginUserMessage("cheesey pizza") )
-console.log(loginUserMessage() )// this will give undefined not NuN
+console.log(loginUserMessage("cheesey pizza"));
+console.log(loginUserMessage()); // this will give undefined not NuN
 
-function calculateCartPrice(val1, val2, ...num1){     // it depends on the use case that '...' will be Rest operator or Spread operatory   
-  return num1
+function calculateCartPrice(val1, val2, ...num1) {
+  // it depends on the use case that '...' will be Rest operator or Spread operatory
+  return num1;
 }
 
-console.log(calculateCartPrice(200,300,400,500,2000)); // here "..." are Rest operator it means collect all the no. and give it to me ohhh yeahhhh
+console.log(calculateCartPrice(200, 300, 400, 500, 2000)); // here "..." are Rest operator it means collect all the no. and give it to me ohhh yeahhhh
 // first one will go in val 1 second in val 2 rest in ...num1
 
 // ************ scope ************
 
 // when we test scope in global enviroment is different then code enviroment
 
-
 //************ closures ************
-// child can ask for icecream but elder can't 
-function one() {                  // elder
+// child can ask for icecream but elder can't
+function one() {
+  // elder
   const username = "chapple ";
-  function two() {                // nested child
+  function two() {
+    // nested child
     const website = "pizza";
     console.log(username);
-    
   }
 
   // console.log(website); // it will give a error because It's scope is ended in the two
 
-  two()
+  two();
 }
 
 one();
-
 
 // **** global object in broswer is called window object but in node it's empty

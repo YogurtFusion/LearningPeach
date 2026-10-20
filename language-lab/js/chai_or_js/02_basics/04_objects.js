@@ -1,7 +1,7 @@
-const tinderUser2 = new Object();//singleton: made by constructor
-const tinderUser = {};//object literal
+const tinderUser2 = new Object(); //singleton: made by constructor
+const tinderUser = {}; //object literal
 
-tinderUser.id = "id-01";// modifying the object
+tinderUser.id = "id-01"; // modifying the object
 tinderUser.name = "sammy";
 tinderUser.isLoggedIn = true;
 
@@ -52,19 +52,17 @@ const user = [
   },
 ];
 
-console.log(user[1].email)
+console.log(user[1].email);
 
 console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));// most important for the project
+console.log(Object.keys(tinderUser)); // most important for the project
 console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 
-
 // ***********************object destructuring***********************
-
 
 const course = {
   coursename: "js in hindi",
@@ -75,10 +73,9 @@ const course = {
 const { courseInstructor: price } = course;
 //const {price: price}=course; //SyntaxError: Identifier 'price' has already been declared
 
-// console.log(courseInstructor);// it have price now courseInstructor is not defined 
+// console.log(courseInstructor);// it have price now courseInstructor is not defined
 
 console.log(price);
-
 
 // react destructuring with props
 // const navbar = ({company})=>{
@@ -86,7 +83,6 @@ console.log(price);
 // }
 
 // navbar(company = "hitest")
-
 
 //json
 // {

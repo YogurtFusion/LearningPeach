@@ -1,12 +1,15 @@
 /* ── Reset ─────────────────────────────────────────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 /* ── Page ──────────────────────────────────────────── */
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -68,8 +71,11 @@ h1 {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
-  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 #start:hover,
@@ -83,7 +89,7 @@ h1 {
 #stop:active {
   transform: scale(0.96);
   filter: brightness(0.94);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* ── Colors ────────────────────────────────────────── */

@@ -17,14 +17,13 @@ for (const key in programing) {
   console.log(`programing value: ${programing[key]} and keys: ${key} `);
 }
 
-
 // Maps
 const map = new Map();
 map.set("In", "India");
 map.set("USA", "United states of America ");
-map.set("Fr", "France")
+map.set("Fr", "France");
 map.set("USA", "United states of America "); // will not print 2 times
 
-for(const key in map){
-    console.log(key)
+for (const key in map) {
+  console.log(key);
 }

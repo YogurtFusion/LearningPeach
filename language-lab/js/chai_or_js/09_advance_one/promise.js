@@ -83,23 +83,21 @@ async function getAllUseres() {
     const data = await response.json();
     console.log(data);
   } catch (error) {
-    console.log("E: ",error);
-    
+    console.log("E: ", error);
   }
 }
 
-getAllUseres()
+getAllUseres();
 
-fetch('https://api.github.com/users/hiteshchoudhary')
-.then((response)=>{
-    return response.json()
-})
-.then((data)=>{
+fetch("https://api.github.com/users/hiteshchoudhary")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
     console.log(data);
-    
-})
-.catch((error)=>console.log(error))
+  })
+  .catch((error) => console.log(error));
 
 // Promise.all([promiseOne, promiseThree])
 // Promise.all
-// yes this is also available , 
+// yes this is also available ,

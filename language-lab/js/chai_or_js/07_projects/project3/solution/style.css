@@ -5,7 +5,7 @@
    humanist-sans caption. One focal element: the clock itself.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,440&family=Inter:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,440&family=Inter:wght@400;500&display=swap");
 
 :root {
   --ink-deep: #070910;
@@ -18,18 +18,26 @@
   --hairline: rgba(244, 239, 227, 0.09);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
 body {
-  background: radial-gradient(ellipse 900px 620px at 50% 36%, var(--ink-panel) 0%, var(--ink) 55%, var(--ink-deep) 100%);
-  font-family: 'Inter', sans-serif;
+  background: radial-gradient(
+    ellipse 900px 620px at 50% 36%,
+    var(--ink-panel) 0%,
+    var(--ink) 55%,
+    var(--ink-deep) 100%
+  );
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -40,7 +48,13 @@ nav {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--hairline) 25%, var(--hairline) 75%, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--hairline) 25%,
+    var(--hairline) 75%,
+    transparent
+  );
 }
 
 .center {
@@ -68,7 +82,7 @@ nav {
 /* the divider earns its place: it separates label from reading,
    like a baseline on a gauge */
 #banner span::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -79,7 +93,7 @@ nav {
 }
 
 #clock {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   font-optical-sizing: auto;
   font-weight: 380;
   font-size: clamp(2.4rem, 9vw, 6.25rem);
@@ -87,7 +101,7 @@ nav {
   letter-spacing: -0.01em;
   color: var(--ivory);
   font-variant-numeric: tabular-nums;
-  font-feature-settings: 'tnum' 1;
+  font-feature-settings: "tnum" 1;
   text-shadow: 0 0 70px var(--brass-soft);
 }
 

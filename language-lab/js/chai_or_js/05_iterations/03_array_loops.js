@@ -19,12 +19,12 @@ for (const greet of greetings) {
 const map = new Map();
 map.set("In", "India");
 map.set("USA", "United states of America ");
-map.set("Fr", "France")
+map.set("Fr", "France");
 map.set("USA", "United states of America "); // will not print 2 times
 
 for (const [key, value] of map) {
-    console.log(key, ":-", value);
-    console.log(map);
+  console.log(key, ":-", value);
+  console.log(map);
 }
 
 // for of in objects
@@ -33,6 +33,6 @@ const myObject = {
   game2: "Spiderman",
 };
 
-// for (const [key, value] of myObject) { // this will not work in object 
+// for (const [key, value] of myObject) { // this will not work in object
 //   console.log(key, ":-", value);
 // }

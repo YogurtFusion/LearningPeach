@@ -26,18 +26,16 @@
     //   document.querySelector("h1").innerHTML = "BEst JS seRies";
     // }, 8000);
 
-  const changeMe =   setTimeout(function () {
+    const changeMe = setTimeout(function () {
       document.querySelector("h1").innerHTML = "BEst JS seRies";
       console.log("so 5secs are passes and h1 is already printed");
-      
     }, 5000);
-    
-    // clearTimeout(changeMe)
-    
-    document.querySelector("#stop").addEventListener("click",function(e){
-        clearTimeout(changeMe)
-        console.log(" if your're reading this then stop is clicked");
-    })
 
+    // clearTimeout(changeMe)
+
+    document.querySelector("#stop").addEventListener("click", function (e) {
+      clearTimeout(changeMe);
+      console.log(" if your're reading this then stop is clicked");
+    });
   </script>
 </html>

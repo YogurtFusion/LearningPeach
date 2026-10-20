@@ -3,13 +3,13 @@
 
 (function chai() {
   console.log(`DB CONNECTED`);
-})(); // ; is necessary for stoping the code working so that next arrow funcion will work 
+})(); // ; is necessary for stoping the code working so that next arrow funcion will work
 // chai()
 
-(()=>{
-    console.log("DB CONNECTED AGAIN")
+(() => {
+  console.log("DB CONNECTED AGAIN");
 })();
 
-((name)=>{
-    console.log(`DB CONNECTED WITH ${name}`)
+((name) => {
+  console.log(`DB CONNECTED WITH ${name}`);
 })("chaple");
