@@ -1,17 +1,17 @@
 import React from "react";
 
 const Main = () => {
-  const ingredients = ["chicken", "Oregano", "Tomatoes","Pizaa", "Pepeoroni"];
+  const ingredients = ["chicken", "Oregano", "Tomatoes", "Pizaa", "Pepeoroni"];
   const ingredientListItems = ingredients.map((items) => (
     <li key={items}> {items} </li>
   ));
 
   function handleSubmit(event) {
-    event.preventDefault()
-  const formData = new FormData(event.currentTarget)
-  const newIngredient = formData.get("ingredients")
-  console.log(newIngredient);
- ingredientListItems.push(newIngredient)
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const newIngredient = formData.get("ingredients");
+    ingredients.push(newIngredient);
+    console.log(ingredients);
   }
   return (
     <main>
@@ -20,15 +20,12 @@ const Main = () => {
           type="text"
           placeholder="e.g. oregano"
           aria-label="Add ingredient here "
-        name="ingredients"
+          name="ingredients"
         />
-        <button type="submit" >
-          Add ingredient
-        </button>
+        <button type="submit">Add ingredient</button>
       </form>
       <ul>{ingredientListItems}</ul>
     </main>
-    
   );
 };
 
