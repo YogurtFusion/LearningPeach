@@ -63,9 +63,9 @@ app.get("/chappel", (req, res) => {
   res.send("<h1>welcome to chappel</h1>");
 });
 
-app.get('/github',(req, res)=>{
-  res.json(githubData)
-})
+app.get("/github", (req, res) => {
+  res.json(githubData);
+});
 
 //app.listen(port,()=>{ // rather then taking port from port variable we're talking it from .env file
 
