@@ -11,7 +11,7 @@ const States = () => {
   return (
     <div>
       <h1 className="title">Is state</h1>
-      <button className="vlaue" onClick={handleClick}>{isImportant}</button>
+      <button className="vlaue heck-yes" onClick={handleClick}>{isImportant}</button>
     </div>
   );
 };
