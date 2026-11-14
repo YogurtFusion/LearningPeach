@@ -114,3 +114,20 @@ legend {
   color: #a1a1aa;
   padding: 0 0.5rem;
 }
+
+
+/* custom css */
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+  padding: 32px 0px;
+}
