@@ -1,0 +1,1 @@
+...prevIngredients copies all existing items from the previous array into a brand-new array.
