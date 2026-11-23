@@ -14,8 +14,8 @@ export default function App() {
   });
 
   let starIcon = contact.isFavorite?starFilled:starEmpty
-
-  function toggleFavorite() {
+  
+  function toggleFavorite() { // wrong way I'm not using an object but a new isfavorite usestate
     setIsFavorite((prev) => !prev);
     console.log("Toggle Favorite");
   }
@@ -36,8 +36,8 @@ export default function App() {
               className="favorite-button"
             >
               <img
-                src={contact.isFavorite ? starFilled : starEmpty}
-                alt={contact.isFavorite ? "Remove from favorites" : "add to favroties "}
+                src={isFavorite ? starFilled : starEmpty}
+                alt={isFavorite ? "starFilled" : "starEmpty"}
                 className="favorite"
               />
             </button>
