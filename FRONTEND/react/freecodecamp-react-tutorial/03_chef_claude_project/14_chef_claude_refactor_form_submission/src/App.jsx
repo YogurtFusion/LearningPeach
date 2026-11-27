@@ -1,15 +1,11 @@
+import Header from "./Header"
+import Main from "./Main"
+
 export default function App() {
-
   return (
-
     <>
-
-      <h1>Chef Claude: Refactor Form Submission</h1>
-
-      <main></main>
-
+      <Header />
+      <Main />
     </>
-
   )
-
 }
